@@ -409,7 +409,7 @@ impl Resource {
                     len = 0;
                     in_param_pattern = false;
                     in_param = false;
-                } else if ch == ':' {
+                } else if ch == ':' && !in_param_pattern {
                     // The parameter name has been determined; custom pattern land
                     in_param_pattern = true;
                     param_pattern.clear();
